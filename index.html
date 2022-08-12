@@ -15,32 +15,73 @@
         <!-- Full name -->
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="Full Name" />
+          <input
+            type="text"
+            id="name"
+            placeholder="Full Name"
+            required
+            minlength="3"
+            maxlength="100"
+            name="name"
+          />
         </div>
         <!-- Phone -->
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="phone" id="phone" placeholder="555-555-5555" />
+          <input
+            type="phone"
+            id="phone"
+            placeholder="555-555-5555"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            name="phone"
+          />
         </div>
         <!-- Email -->
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="email@address.com" />
+          <input
+            type="email"
+            id="email"
+            placeholder="email@address.com"
+            required
+            name="email"
+          />
         </div>
         <!-- Website URL -->
         <div class="form-group">
           <label for="website">Website URL</label>
-          <input type="url" id="website" placeholder="http://test.com" />
+          <input
+            type="url"
+            id="website"
+            placeholder="http://test.com"
+            required
+            name="website"
+          />
         </div>
         <!-- Password -->
         <div class="form-group">
           <label for="password1">Password</label>
-          <input type="password" id="password1" placeholder="Create password" />
+          <input
+            type="password"
+            id="password1"
+            placeholder="Create password (min 8)"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            title="at leat 1 uppercase"
+            name="password"
+          />
         </div>
         <!-- Confirm Password -->
         <div class="form-group">
           <label for="password2">Confirm Pass</label>
-          <input type="password" id="password2" placeholder="Confirm pass" />
+          <input
+            type="password"
+            id="password2"
+            placeholder="Confirm pass"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+          />
         </div>
         <button type="submit">Register</button>
       </form>
